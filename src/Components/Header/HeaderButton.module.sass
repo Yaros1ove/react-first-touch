@@ -1,0 +1,30 @@
+@use '../../Constants/constants.sass' as *
+
+.header__button
+  margin: 0 20px
+
+  font: $regular14
+  color: $white
+  cursor: pointer
+
+  -moz-user-select: none
+  -khtml-user-select: none
+  user-select: none
+
+  & p::after
+    display: block
+    left: 0
+    width: 0
+    height: 1px
+    background-color: $white
+    content: ""
+    transition: width 0.3s ease-in-out
+  & img
+    transition: transform 0.3s
+
+  &:focus,
+  &:hover
+    & p::after
+      width: 100%
+    & img
+      transform: scale(1.1)
