@@ -1,19 +1,21 @@
 import {ReactNode} from "react"
 
+
+export type Color = `rgba(${number}, ${number}, ${number}, ${number})`
 export type Props = {
-  children?: ReactNode
-  background?: string | Color
+  children?: ReactNode,
+  bgColor?: string,
+  brandLogo?: string
+  separator?: boolean
 }
 
-export type Color = {
-  red: number,
-  green: number,
-  blue: number,
-  opacity?: number,
-}
+export const background: Color = 'rgba(229, 229, 229, 1)'
+export const white: Color = 'rgba(255, 255, 255, 1)'
+export const accent: Color = 'rgba(33, 33, 33, 1)'
 
-export const background: Color = {
-  red: 229,
-  green: 229,
-  blue: 229,
+export enum BGColors {
+  White = 'white',
+  Black = 'white',
+  Accent = 'accent',
+  Top = 'top',
 }

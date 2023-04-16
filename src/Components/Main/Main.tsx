@@ -1,17 +1,10 @@
+import classNames from 'classnames'
 import { Props } from '../../Constants/types'
 
-function Main({ children, background, ...props }: Props) {
-
-  let style: object = {}
-  if (typeof background === 'string') {
-    style = {backgroundImage: `url(${background})`}
-  } else if (typeof background === 'object') {
-    const color = '#' + background.red.toString(16) + background.green.toString(16) + background.blue.toString(16)
-    style = {backgroundColor: color}
-  }
-
+function Main({ children, bgColor, separator,  ...props }: Props) {
   return (
-    <div className='main' style={style}>
+    <div className={classNames('main', `main_${bgColor}`)}>
+      {separator && <hr className='separateLine' />}
       <div className='container'>{children}</div>
     </div>
   )

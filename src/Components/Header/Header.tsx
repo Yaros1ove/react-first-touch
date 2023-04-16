@@ -1,13 +1,21 @@
+import classNames from 'classnames'
+
 import Logo from '../../Logo'
 import search from '../../Images/search.png'
 import account from '../../Images/account.png'
 import HeaderButton from './HeaderButton'
 import styles from './Header.module.sass'
+import { useState } from 'react'
+import useScroll from '../../Hooks/useScroll'
 
 function Header() {
+
+  const [scroll, setScroll] = useState(0)
+  useScroll(setScroll)
+
   return (
-    <div className={styles.header}>
-      <div className="container">
+    <div className={(scroll < 50) ? classNames(styles.header, styles.header_transparent) : styles.header}>
+      <div className='container'>
         <div className={styles.header__inner}>
           <div className={styles.header__buttons_left}>
             <HeaderButton><p onClick={() => { }}>Контрагентам</p></HeaderButton>
