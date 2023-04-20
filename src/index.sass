@@ -1,6 +1,9 @@
 @use './Constants/constants.sass' as *
 @import './clear.sass'
 
+body
+  font-family: $font
+
 .logo
   width: 216px
   height: $logoHeight
@@ -10,8 +13,13 @@
 
 .container
   width: $containerWidth
+  height: 100%
 
-  // outline: 1px solid red
+  display: flex
+  justify-content: center
+
+  &_separator
+    width: $containerWidth
 
 .main
   background-position: center
@@ -20,17 +28,20 @@
   flex-direction: column
   align-items: center
 
-  outline: 3px solid blue
-  height: 500px
+  // height: 500px
 
   &_black
     background-image: url('./Images/bgc_black.png')
     color: $white
 
+    padding: 100px 0
+
   &_white
     background-color: $background
     color: $accent
-  
+
+    padding: 120px 0
+
   &_top
     justify-content: flex-end
 
@@ -41,3 +52,17 @@
 
     background-image: url('./Images/bgc_ring.png')
     color: $white
+
+.topInner
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+
+  padding-bottom: 100px
+
+  & > *:last-child    
+    margin-top: 50px
+
+  & .topHeader
+    font: $header36

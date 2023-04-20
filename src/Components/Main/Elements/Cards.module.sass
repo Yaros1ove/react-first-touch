@@ -1,0 +1,11 @@
+@use '../../../Constants/constants.sass' as *
+  
+.cards
+  width: 100%
+
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  & *
+    margin: calc(($containerWidth - 3 * $cardWidth) / 4) 0

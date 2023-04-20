@@ -18,19 +18,19 @@ function Header() {
       <div className='container'>
         <div className={styles.header__inner}>
           <div className={styles.header__buttons_left}>
-            <HeaderButton><p onClick={() => { }}>Контрагентам</p></HeaderButton>
-            <HeaderButton><p onClick={() => { }}>Дизайнерам</p></HeaderButton>
-            <HeaderButton><p onClick={() => { }}>Вакансии</p></HeaderButton>
+            <HeaderButton><p onClick={() => { }}>Counterparties</p></HeaderButton>
+            <HeaderButton><p onClick={() => { }}>Designers</p></HeaderButton>
+            <HeaderButton><p onClick={() => { }}>Jobs</p></HeaderButton>
           </div>
           <Logo />
           <div className={styles.header__buttons_right}>
             <HeaderButton>
               <div className={styles.header__icons}>
                 <img onClick={() => { }} src={search} alt='search'></img>
-                <p onClick={() => { }}>Поиск</p>
+                <p onClick={() => { }}>Search</p>
               </div>
             </HeaderButton>
-            <HeaderButton><p onClick={() => { }}>Вход/Регистрация</p></HeaderButton>
+            <HeaderButton><p onClick={() => { }}>Log in/Registration</p></HeaderButton>
             <HeaderButton>
               <div className={styles.header__icons}>
                 <img onClick={() => { }} src={account} alt='account'></img>

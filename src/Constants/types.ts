@@ -3,10 +3,11 @@ import {ReactNode} from "react"
 
 export type Color = `rgba(${number}, ${number}, ${number}, ${number})`
 export type Props = {
-  children?: ReactNode,
-  bgColor?: string,
+  children?: ReactNode
+  bgColor?: string
   brandLogo?: string
-  separator?: boolean
+  separateChildren?: ReactNode
+  cards?: string[]
 }
 
 export const background: Color = 'rgba(229, 229, 229, 1)'

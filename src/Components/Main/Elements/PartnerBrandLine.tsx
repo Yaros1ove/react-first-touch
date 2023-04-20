@@ -3,6 +3,7 @@ import PartnerBrand from "./PartnerBrand"
 import line from '../../../Images/line2.png'
 
 import styles from './PartnerBrandLine.module.sass'
+import React from 'react'
 
 function PartnerBrandLine() {
   const brands = [brandLogo, brandLogo, brandLogo, brandLogo, brandLogo, brandLogo]
@@ -10,10 +11,10 @@ function PartnerBrandLine() {
     <>
       <div className={styles.line}>
         {brands.map((brand, index) => {
-          return <>
-            {index ? <img key={index} src={line} alt='' /> : <></>}
+          return <React.Fragment key={index}>
+            {index ? <img src={line} alt='' /> : <></>}
             <PartnerBrand brandLogo={brand} />
-          </>
+          </React.Fragment>
         })}
       </div>
     </>
